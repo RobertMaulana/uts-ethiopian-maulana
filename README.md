@@ -3,8 +3,8 @@
 Simple Restaurant API adalah API yang memungkinkan user untuk menampilkan atau mengolah data yang sudah disediakan oleh developer API ini, yaitu Restaurant.inc
 
 ### List Collections
- - Foods
- - Restaurants
+ - Food
+ - Restaurant
 
 # Api Basic Parameters
 
@@ -27,5 +27,13 @@ List **Restaurants** Routes yang bisa digunakan:
 | /api/restaurants | POST | Menambahkan restaurant baru
 | /api/restaurants/:id | DELETE | Menghapus restaurant
 | /api/restaurants/:id | PUT | Memperbarui informasi salah satu restaurant
+
+### Example Usage
+
+| Usage | Route |
+| ------ | ------ |
+| Get all data foods | [http://localhost:3000/api/foods] [local] |
+
+[local]: <http://localhost:3000/api/foods>
 
 **Develop by Robert Maulana**
