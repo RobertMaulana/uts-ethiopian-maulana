@@ -32,7 +32,7 @@ List **Restaurants** Routes yang bisa digunakan:
 
 | Usage | Route |
 | ------ | ------ |
-| Get all data foods | [http://localhost:3000/api/foods] [local] |
+| Get all data foods | http://localhost:3000/api/foods |
 
 [local]: <http://localhost:3000/api/foods>
 
