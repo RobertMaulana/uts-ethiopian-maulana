@@ -1,6 +1,5 @@
 const db = require('../models/food_model');
 
-
 let createFood = (req, res) => {
   db.create(req.body, (err, result) => {
     if (!err) {

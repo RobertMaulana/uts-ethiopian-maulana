@@ -6,10 +6,10 @@ let restaurantSchema = new mongoose.Schema({
   owner: String,
   address: String,
   open_status: Boolean,
-  menu: {
+  menu: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Food'
-  }
+  }]
 });
 
 let Restaurant = db.model("Restaurant", restaurantSchema);
