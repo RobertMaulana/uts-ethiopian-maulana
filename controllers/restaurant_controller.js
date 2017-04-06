@@ -21,11 +21,9 @@ let createRestaurant = (req, res) => {
     open_status: status,
     menu: arrFoodlist,
   }, (err, result) => {
-    if (!err) {
-      res.send(result);
-    }else {
-      res.send(err.message);
-    }
+
+    (!err) ? res.send(result) : res.send(err.message);
+
   })
 }
 
@@ -33,11 +31,9 @@ let getAllDataRestaurant = (req, res) => {
   db.find({})
     .populate("menu")
     .exec((err, result) => {
-      if (!err) {
-        res.send(result);
-      }else {
-        res.send(err.message)
-      }
+
+      (!err) ? res.send(result) : res.send(err.message);
+
     })
 }
 
@@ -45,21 +41,17 @@ let getSingleDataRestaurant = (req, res) => {
   db.findById(req.params.id)
     .populate("menu")
     .exec((err, result) => {
-      if (!err) {
-        res.send(result);
-      }else {
-        res.send(err.message)
-      }
+
+      (!err) ? res.send(result) : res.send(err.message);
+
     })
 }
 
 let removeRestaurant = (req, res) => {
   db.findByIdAndRemove(req.params.id, (err, result) => {
-    if (!err) {
-      res.send(`Data restaurant with id ${req.params.id} has been removed!`);
-    }else {
-      res.send(err.message);
-    }
+
+    (!err) ? res.send(`Data restaurant with id ${req.params.id} has been removed!`) : res.send(err.message);
+
   })
 }
 
@@ -88,11 +80,9 @@ let updateRestaurant = (req, res) => {
         menu: arrFoodlist,
       }
     }, {new: true}, (err, result) => {
-    if (!err) {
-      res.send(`Data restaurant with id ${req.params.id} has been updated!`);
-    }else {
-      res.send(err.message);
-    }
+
+      (!err) ? res.send(`Data restaurant with id ${req.params.id} has been updated!`) : res.send(err.message);
+
   })
 }
 

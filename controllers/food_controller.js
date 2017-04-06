@@ -2,41 +2,33 @@ const db = require('../models/food_model');
 
 let createFood = (req, res) => {
   db.create(req.body, (err, result) => {
-    if (!err) {
-      res.send(result);
-    }else {
-      res.send(err.message);
-    }
+
+    (!err) ? res.send(result) : res.send(err.message);
+
   })
 }
 
 let getAllDataFood = (req, res) => {
   db.find({}, (err, result) => {
-    if (!err) {
-      res.send(result);
-    }else {
-      res.send(err.message);
-    }
+
+    (!err) ? res.send(result) : res.send(err.message);
+
   })
 }
 
 let getSingleDataFood = (req, res) => {
   db.findById(req.params.id, (err, result) => {
-    if (!err) {
-      res.send(result);
-    }else {
-      res.send(err.message);
-    }
+
+    (!err) ? res.send(result) : res.send(err.message);
+
   })
 }
 
 let removeFood = (req, res) => {
   db.findByIdAndRemove(req.params.id, (err, result) => {
-    if (!err) {
-      res.send(`Data food with id ${req.params.id} has been removed!`);
-    }else {
-      res.send(err.message);
-    }
+
+    (!err) ? res.send(`Data food with id ${req.params.id} has been removed!`) : res.send(err.message);
+
   })
 }
 
@@ -51,11 +43,9 @@ let updateFood = (req, res) => {
 
       }
     }, {new: true}, (err, result) => {
-    if (!err) {
-      res.send(`Data food with id ${req.params.id} has been updated!`);
-    }else {
-      res.send(err.message);
-    }
+
+      (!err) ? res.send(`Data food with id ${req.params.id} has been updated!`) : res.send(err.message);
+      
   })
 }
 
