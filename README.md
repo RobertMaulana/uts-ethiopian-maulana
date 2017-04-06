@@ -1,6 +1,6 @@
 # Simple Restaurant API
 
-Simple Restaurant API adalah API yang memungkinkan user untuk menampilkan atau mengolah data yang sudah disediakan oleh developher API ini, yaitu Restaurant.inc
+Simple Restaurant API adalah API yang memungkinkan user untuk menampilkan atau mengolah data yang sudah disediakan oleh developer API ini, yaitu Restaurant.inc
 
 ### List Collections
  - Foods

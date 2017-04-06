@@ -6,6 +6,8 @@ const foods = require("./routes/foods");
 const restaurants = require("./routes/restaurants");
 
 app.use(bodyParser.urlencoded({extended: true}));
+
+// routes
 app.use("/api/foods", foods);
 app.use("/api/restaurants", restaurants);
 
